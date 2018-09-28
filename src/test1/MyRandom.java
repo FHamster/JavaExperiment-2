@@ -1,3 +1,5 @@
+package test1;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
@@ -7,7 +9,7 @@ import java.util.Scanner;
 
 public class MyRandom
 {
-    private static int randNum()
+    public static int randNum()
     {
         return randNum(1, 100);
     }//对randNum的包装
@@ -17,12 +19,12 @@ public class MyRandom
         return (int) (a + Math.random() * (b - a + 1));
     }//生成[a,b]区间内随机数字
 
-    private static char randChar()
+    public static char randChar()
     {
         return (char) ('a' + Math.random() * ('z' - 'a' + 1));
     }//生成随机小写字母
 
-    private static int[] randNumArr(int n)////生成随机数字数组
+    public static int[] randNumArr(int n)////生成随机数字数组
     {
         int[] numArr = new int[n];
         for (int i = 0; i < numArr.length; i++)
@@ -32,7 +34,7 @@ public class MyRandom
         return numArr;
     }
 
-    private static char[] randCharArr(int n)//生成随机字母数组
+    public static char[] randCharArr(int n)//生成随机字母数组
     {
         char[] charArr = new char[n];
         for (int i = 0; i < charArr.length; i++)
@@ -42,7 +44,7 @@ public class MyRandom
         return charArr;
     }
 
-    private static double[] radioStatistic(int[] arr)//统计数组中元素出现频率
+    public static double[] radioStatistic(int[] arr)//统计数组中元素出现频率
     {
         int sum = 0;
         for (int x : arr)
@@ -58,7 +60,7 @@ public class MyRandom
         return radioArr;
     }
 
-    private static void test1()
+    static void test1()
     {
         Scanner scanner = new Scanner(System.in);
         int n;
@@ -88,7 +90,7 @@ public class MyRandom
 
     }
 
-    private static void test2()
+    static void test2()
     {
         Scanner scanner = new Scanner(System.in);
         int n;
@@ -109,7 +111,7 @@ public class MyRandom
         }
     }
 
-    private static void test3()
+    static void test3()
     {
 //读取文件
         File file = new File("src/Object.txt");
@@ -143,12 +145,5 @@ public class MyRandom
         {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] argc)
-    {
-        test1();
-        test2();
-        test3();
     }
 }

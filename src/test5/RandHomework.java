@@ -1,3 +1,6 @@
+package test5;
+
+import test1.MyRandom;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +26,5 @@ public class RandHomework
         {
             System.out.printf("选择实验%d的学生有%d人\n", i, arr[i]);
         }
-
     }
 }
